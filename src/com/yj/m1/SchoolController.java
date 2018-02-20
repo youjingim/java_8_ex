@@ -19,13 +19,12 @@ public class SchoolController {
 		int sel;
 		StudentService service = new StudentService();
 		StudentView view = new StudentView();
-		StudentGrade grade1 = new StudentGrade();
 		GradeView v = new GradeView();
 		Student [] student = null;
 		while (check) {
 			System.out.println("1. 학생 등록");
 			System.out.println("2. 성적 입력");
-			System.out.println("3. 성적 조회");
+			System.out.println("3. 학생 조회");
 			System.out.println("4. 전체 조회");
 			System.out.println("5. 프로그램 종료");
 
@@ -38,10 +37,10 @@ public class SchoolController {
 				break;
 			case 2 : 
 				System.out.println("성적 입력");
-				grade1.grade(student);
+				service.grade(student);
 				break;
 			case 3 :
-				System.out.println("성적 조회");
+				System.out.println("학생 조회");
 				v.view1(student);
 				break;
 			case 4 : 
