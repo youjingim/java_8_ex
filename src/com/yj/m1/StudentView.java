@@ -15,6 +15,7 @@ public class StudentView {
 			System.out.println("수학 : " + student[i].math);
 			System.out.println("총점 : " + student[i].total);
 			System.out.println("평균 : " + student[i].math);
+			System.out.println("==============================");
 
 		}
 		

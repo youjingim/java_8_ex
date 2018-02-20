@@ -38,7 +38,7 @@ public class SchoolController {
 				break;
 			case 2 : 
 				System.out.println("성적 입력");
-				student = grade1.grade(student);
+				grade1.grade(student);
 				break;
 			case 3 :
 				System.out.println("성적 조회");
