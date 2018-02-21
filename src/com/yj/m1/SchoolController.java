@@ -17,9 +17,9 @@ public class SchoolController {
 		Scanner sc = new Scanner(System.in);
 		boolean check = true;
 		int sel;
+		int i;
 		StudentService service = new StudentService();
-		StudentView view = new StudentView();
-		GradeView v = new GradeView();
+		StudentView view1 = new StudentView();
 		Student [] student = null;
 		while (check) {
 			System.out.println("1. 학생 등록");
@@ -41,11 +41,14 @@ public class SchoolController {
 				break;
 			case 3 :
 				System.out.println("학생 조회");
-				v.view1(student);
+				i=service.search(student);
+				if(i!=student.length) {
+				view1.viewStudent(student, i);
+				}
 				break;
 			case 4 : 
 				System.out.println("전체 조회");
-				view.view(student);
+				view1.view(student);
 				break;
 			case 5 : 
 				System.out.println("프로그램 종료");
